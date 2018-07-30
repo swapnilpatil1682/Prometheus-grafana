@@ -9,7 +9,7 @@ To make use of that functionality the --kubelet-service argument must be passe
 
 
 
-helm install coreos/prometheus-operator --name prometheus-operator --namespace  test-prometheus  <Run with values.yaml> 
+helm install coreos/prometheus-operator --name prometheus-operator --namespace  test-prometheus -f  <Run with values.yaml> 
 helm install coreos/kube-prometheus --name kube-prometheus --set global.rbacEnable=true --namespace test-prometheus 
 
 kubectl port-forward -n test-prometheus prometheus-kube-prometheus-0 9090
