@@ -197,7 +197,7 @@ prometheus:
   ingress:
     ## If true, Prometheus Ingress will be created
     ##
-    enabled: false
+    enabled: true
 
     ## Annotations for Prometheus Ingress
     ##
@@ -214,8 +214,8 @@ prometheus:
     ##
     # hosts:
     #   - alertmanager.domain.com
-    hosts: []
-
+    hosts: 
+     - prometheus-kube.mycujoo.tv     
     ## TLS configuration for Prometheus Ingress
     ## Secret must be manually created in the namespace
     ##
@@ -355,10 +355,10 @@ prometheus:
 
       ## Namespaces from which services are selected
       ##
-        namespaceSelector:
+#      namespaceSelector:
         ## Match any namespace
         ##
-          any: true
+ #       any: true
 
         ## Explicit list of namespace names to select
         ##
